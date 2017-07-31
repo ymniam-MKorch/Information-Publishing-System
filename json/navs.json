@@ -1,14 +1,36 @@
-[{
-	"title" : "后台首页",
-	"icon" : "icon-computer",
-	"href" : "page/main.html",
-	"spread" : false
-},{
-	"title" : "文章列表",
-	"icon" : "icon-text",
-	"href" : "page/news/newsList.html",
-	"spread" : false
-},{
+[
+  {
+    "title": "管理首页",
+    "icon": "icon-computer",
+    "href": "page/main.html",
+    "spread": false
+  },
+  {
+    "title": "终端",
+    "icon": "&#xe63b;",
+    "href": "page/news/newsList.html",
+    "spread": false,
+    "children": [
+      {
+        "title": "终端",
+        "icon": "&#xe63b;",
+        "href": "page/404.html",
+        "spread": false
+      },
+      {
+        "title": "终端群组",
+        "icon": "icon-screengroup",
+        "href": "page/login/login.html",
+        "spread": false
+      },
+      {
+        "title": "操作记录",
+        "icon": "&#xe609;",
+        "href": "page/login/login.html",
+        "spread": false
+      }
+    ]
+  },{
 	"title" : "友情链接",
 	"icon" : "&#xe64c;",
 	"href" : "page/links/linksList.html",
