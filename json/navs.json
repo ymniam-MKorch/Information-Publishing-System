@@ -25,39 +25,61 @@
       },
       {
         "title": "操作记录",
-        "icon": "&#xe609;",
+        "icon": "icon-jilu",
         "href": "page/login/login.html",
         "spread": false
       }
     ]
-  },{
-	"title" : "友情链接",
-	"icon" : "&#xe64c;",
-	"href" : "page/links/linksList.html",
-	"spread" : false
-},{
-	"title" : "系统基本参数",
-	"icon" : "&#xe631;",
-	"href" : "page/systemParameter/systemParameter.html",
-	"spread" : false
-},{
-	"title" : "其他页面",
-	"icon" : "&#xe630;",
-	"href" : "",
-	"spread" : false,
-	"children" : [
-		{
-			"title" : "404页面",
-			"icon" : "&#xe61c;",
-			"href" : "page/404.html",
-			"spread" : false
-		},
-		{
-			"title" : "登录",
-			"icon" : "&#xe609;",
-			"href" : "page/login/login.html",
-			"spread" : false,
-			"target" : "_blank"
-		}
-	]
-}]
+  },
+  {
+    "title": "节目管理",
+    "icon": "&#xe6ed;",
+    "href": "page/links/linksList.html",
+    "spread": false
+  },
+  {
+    "title": "播放日程",
+    "icon": "&#xe637;",
+    "href": "page/systemParameter/systemParameter.html",
+    "spread": false
+  },
+  {
+    "title": "素材库",
+    "icon": "&#xe64a;",
+    "href": "",
+    "spread": false,
+    "children": [
+      {
+        "title": "素材",
+        "icon": "&#xe64a;",
+        "href": "page/404.html",
+        "spread": false
+      },
+      {
+        "title": "模板比例",
+        "icon": "&#xe630;",
+        "href": "page/login/login.html",
+        "spread": false,
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "title": "用户",
+    "icon": "&#xe612;",
+    "href": "page/systemParameter/systemParameter.html",
+    "spread": false
+  },
+  {
+    "title": "设置",
+    "icon": "&#xe614;",
+    "href": "page/systemParameter/systemParameter.html",
+    "spread": false
+  },
+  {
+    "title": "帮助",
+    "icon": "&#xe607;",
+    "href": "page/systemParameter/systemParameter.html",
+    "spread": false
+  }
+]

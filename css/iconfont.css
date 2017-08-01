@@ -1,11 +1,16 @@
 
+/*使用了iconfont-阿里巴巴矢量图标库*/
+/*网址 http://www.iconfont.cn */
+/*使用github登录，用户名18362925873@163.com  密码zxc123..*/
+/*使用方法 http://www.cnblogs.com/lch880/p/3359222.html */
+
 @font-face {
   font-family: 'iconfont';  /* project id 370043 */
-  src: url('//at.alicdn.com/t/font_w9hn991yj9i442t9.eot');
-  src: url('//at.alicdn.com/t/font_w9hn991yj9i442t9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_w9hn991yj9i442t9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_w9hn991yj9i442t9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_w9hn991yj9i442t9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.eot');
+  src: url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -41,3 +46,13 @@
 .icon-menu1:before {content: '\e721';}
 
 .icon-dianziping:before {content: '\e673';}
+
+.icon-caozuo:before {content: '\e628';}
+
+.icon-guanbi1:before {content: '\e71c';}
+
+.icon-guanbi2:before {content: '\e633';}
+
+.icon-computer:before {content: '\e649';}
+
+.icon-jilu:before {content: '\e612';}
