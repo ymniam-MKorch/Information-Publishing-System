@@ -84,7 +84,7 @@
 .panel a:hover .panel_icon i{ display:inline-block; transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg);}
 .panel_word{ width:60%; display: inline-block; float:right; margin-top: 22px; }
 .panel_word span{ font-size:40px; display:block; height:30px; line-height:30px;}
-.panel_word p { font-size: 20px;display: block;height: 30px;line-height: 30px;margin-top:10px;}
+.panel_word p { font-size: 17px;display: block;height: 30px;line-height: 30px;margin-top:10px;}
 .allNews em{ font-style:normal; font-size:16px;display: block; }
 .panel_box a .allNews cite{ display:none; }
 .panel_box a cite{ font-size:16px; display: block; font-style:normal; }

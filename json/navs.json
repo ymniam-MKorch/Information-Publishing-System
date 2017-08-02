@@ -8,13 +8,13 @@
   {
     "title": "终端",
     "icon": "&#xe63b;",
-    "href": "page/news/newsList.html",
+    "href": "",
     "spread": false,
     "children": [
       {
         "title": "终端",
         "icon": "&#xe63b;",
-        "href": "page/404.html",
+        "href": "page/terminal/terminal.html",
         "spread": false
       },
       {
