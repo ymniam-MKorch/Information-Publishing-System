@@ -9,6 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="../../css/iconfont.css" media="all" />
     <link rel="stylesheet" href="../../css/terminal.css" media="all" />
@@ -22,13 +23,10 @@
             <a class="layui-btn search_btn">查询</a>
         </div>
         <div class="layui-inline">
-            <a class="layui-btn layui-btn-normal terminalAdd_btn">添加文章</a>
+            <a class="layui-btn layui-btn-normal terminalAdd_btn">添加终端</a>
         </div>
         <div class="layui-inline">
-            <a class="layui-btn recommend" style="background-color:#5FB878">推荐文章</a>
-        </div>
-        <div class="layui-inline">
-            <a class="layui-btn audit_btn">审核文章</a>
+            <a class="layui-btn refresh_all" style="background-color:#5FB878">批量刷新</a>
         </div>
         <div class="layui-inline">
             <a class="layui-btn layui-btn-danger batchDel">批量删除</a>
@@ -72,5 +70,7 @@
     <div id="page"></div>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="terminal.js"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
