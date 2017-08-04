@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>终端添加</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+</head>
+<body class="childrenBody">
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">ID</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="ID">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">终端名称</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="终端名称">
+                </div>
+            </div>
+        </div>
+        
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">硬件识别码</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="硬件识别码">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">所有者</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="所有者">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">默认节目</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="默认节目">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">IP地址</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="IP地址">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">许可使用</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="use" class="use" title="使用">
+                </div>
+            </div>
+            <div class="layui-inline">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <button class="layui-btn layui-btn-primary" >取消</button>
+                <button class="layui-btn" lay-submit="" lay-filter="addNews">确认</button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="edit_terminal.js"></script>
+</body>
+</html>

@@ -222,10 +222,19 @@
         var Name;
         for (var i = 0; i < terminalData.length; i++) {
             if (terminalData[i].ID == _this.attr("data-id")) {
-                layer.prompt({ title: '输入名称，并确认', formType: 0, value: terminalData[i].Name }, function (name, index) {
-                    layer.close(index);
-                    layer.msg('编辑成功！');
-                });
+                var index = layui.layer.open({
+                    title: "编辑终端",
+                    type: 2,
+                    content: "edit_terminal.html",
+                    area: ['50%', '50%'],
+                    success: function (layero, index) {
+                        setTimeout(function () {
+                            layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
+                                tips: 3
+                            });
+                        }, 500)
+                    }
+                })
             }
         }
     })
