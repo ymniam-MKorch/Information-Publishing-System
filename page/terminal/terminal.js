@@ -100,12 +100,13 @@
     $(window).one("resize", function () {
         $(".terminalAdd_btn").click(function () {
             var index = layui.layer.open({
-                title: "添加文章",
+                title: "添加终端",
                 type: 2,
-                content: "terminalAdd.html",
+                content: "addterminal.html",
+                area: ['100%', '100%'],
                 success: function (layero, index) {
                     setTimeout(function () {
-                        layui.layer.tips('点击此处返回文章列表', '.layui-layer-setwin .layui-layer-close', {
+                        layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
                             tips: 3
                         });
                     }, 500)
@@ -217,7 +218,16 @@
     })
 
     $("body").on("click", ".terminal_edit", function () {  //编辑
-        layer.alert('您点击了文章编辑按钮，由于是纯静态页面，所以暂时不存在编辑内容，后期会添加，敬请谅解。。。', { icon: 6, title: '文章编辑' });
+        var _this = $(this);
+        var Name;
+        for (var i = 0; i < terminalData.length; i++) {
+            if (terminalData[i].ID == _this.attr("data-id")) {
+                layer.prompt({ title: '输入名称，并确认', formType: 0, value: terminalData[i].Name }, function (name, index) {
+                    layer.close(index);
+                    layer.msg('编辑成功！');
+                });
+            }
+        }
     })
 
     $("body").on("click", ".terminal_del", function () {  //删除
@@ -264,12 +274,11 @@
                         + '<td><input type="checkbox" name="show" lay-skin="switch" lay-text="是|否" lay-filter="Use"' + currData[i].Use + '></td>'
                         + '<td>'
                         + '<div class="btn-group-vertical">'
-                        + '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">操作<span class="caret"></span>'
+                        + '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background-color:#5FB878;width:80px;"><font color="FFFFFF">操作</font><span class="caret"></span>'
                         + '</button>'
                         + '<ul class="dropdown-menu">'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_edit"><i class="iconfont icon-edit"></i> 编辑</a></li>'
-                        + '<li><a class="layui-btn layui-btn-normal layui-btn-mini terminal_collect"><i class="layui-icon">&#xe600;</i> 收藏</a></li>'
-                        + '<li><a class="layui-btn layui-btn-danger layui-btn-mini terminal_del" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini terminal_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini terminal_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
                         + '</ul>'
                         + '</div>'
                         + '</td>'
