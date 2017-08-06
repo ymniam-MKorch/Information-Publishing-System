@@ -184,7 +184,7 @@
     //通过判断文章是否全部选中来确定全选按钮是否选中
     form.on("checkbox(choose)", function (data) {
         var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"])');
-        var childChecked = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"]):checked')
+        var childChecked = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"]):checked');
         if (childChecked.length == child.length) {
             $(data.elem).parents('table').find('thead input#allChoose').get(0).checked = true;
         } else {
@@ -199,7 +199,7 @@
         setTimeout(function () {
             layer.close(index);
             layer.msg("使用状态修改成功！");
-        }, 2000);
+        }, 1000);
     })
 
     //操作
@@ -232,7 +232,7 @@
                             layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
                                 tips: 3
                             });
-                        }, 500)
+                        }, 300)
                     }
                 })
             }

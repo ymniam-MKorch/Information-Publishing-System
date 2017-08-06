@@ -9,35 +9,38 @@
         $ = layui.jquery;
 
     //创建一个编辑器
-    var editIndex = layedit.build('news_content');
-    var addNewsArray = [], addNews;
-    form.on("submit(addNews)", function (data) {
+    var editIndex = layedit.build('terminal_content');
+    var addterminalArray = [], addterminal;
+    form.on("submit(addterminal)", function (data) {
         //是否添加过信息
-        if (window.sessionStorage.getItem("addNews")) {
-            addNewsArray = JSON.parse(window.sessionStorage.getItem("addNews"));
+        if (window.sessionStorage.getItem("addterminal")) {
+            addterminalArray = JSON.parse(window.sessionStorage.getItem("addterminal"));
         }
         //显示、审核状态
-        var isShow = data.field.show == "on" ? "checked" : "",
-            newsStatus = data.field.shenhe == "on" ? "审核通过" : "待审核";
+        var Use = data.field.use == "on" ? "checked" : "";
 
-        addNews = '{"newsName":"' + $(".newsName").val() + '",';  //文章名称
-        addNews += '"newsId":"' + new Date().getTime() + '",';	 //文章id
-        addNews += '"newsLook":"' + $(".newsLook option").eq($(".newsLook").val()).text() + '",'; //开放浏览
-        addNews += '"newsTime":"' + $(".newsTime").val() + '",'; //发布时间
-        addNews += '"newsAuthor":"' + $(".newsAuthor").val() + '",'; //文章作者
-        addNews += '"isShow":"' + isShow + '",';  //是否展示
-        addNews += '"newsStatus":"' + newsStatus + '"}'; //审核状态
-        addNewsArray.unshift(JSON.parse(addNews));
-        window.sessionStorage.setItem("addNews", JSON.stringify(addNewsArray));
+        addterminal = '{"ID":"' + $(".terminalID").val() + '",';  //ID
+        addterminal += '"Name":"' + $(".terminalName").val() + '",';  //名称
+        addterminal += '"Hardware_Identification_Code":"' + $(".terminalHard").val() + '",';  //硬件识别码
+        addterminal += '"Author":"' + $(".terminalAuthor").val() + '",'; //文章作者
+        addterminal += '"Progress":"??%",'; //发送进度
+        addterminal += '"Program":"' + $(".terminalProgram").val() + '",'; //节目
+        addterminal += '"Status":"0",'; //状态
+        addterminal += '"IP":"' + $(".terminalIP").val() + '",'; //IP
+        addterminal += '"Last_Login": "2017.7.20",'; //时间
+        addterminal += '"Use":"' + Use + '"}';  //是否展示
+
+        addterminalArray.unshift(JSON.parse(addterminal));
+        window.sessionStorage.setItem("addterminal", JSON.stringify(addterminalArray));
         //弹出loading
         var index = top.layer.msg('数据提交中，请稍候', { icon: 16, time: false, shade: 0.8 });
         setTimeout(function () {
             top.layer.close(index);
-            top.layer.msg("文章添加成功！");
+            top.layer.msg("终端添加成功！");
             layer.closeAll("iframe");
             //刷新父页面
             parent.location.reload();
-        }, 2000);
+        }, 1000);
         return false;
     })
 

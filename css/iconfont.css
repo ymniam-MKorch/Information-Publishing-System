@@ -5,12 +5,9 @@
 /*使用方法 http://www.cnblogs.com/lch880/p/3359222.html */
 
 @font-face {
-  font-family: 'iconfont';  /* project id 370043 */
-  src: url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.eot');
-  src: url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_x79414bnfx3zbyb9.svg#iconfont') format('svg');
+    font-family: 'iconfont'; /* project id 370043 */
+    src: url('//at.alicdn.com/t/font_wjik5fz2rem3rf6r.eot');
+    src: url('//at.alicdn.com/t/font_wjik5fz2rem3rf6r.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_wjik5fz2rem3rf6r.woff') format('woff'), url('//at.alicdn.com/t/font_wjik5fz2rem3rf6r.ttf') format('truetype'), url('//at.alicdn.com/t/font_wjik5fz2rem3rf6r.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -58,3 +55,11 @@
 .icon-jilu:before {content: '\e612';}
 
 .icon-edit:before {content: '\e61a';}
+
+.icon-look:before {
+    content: '\e634';
+}
+
+.icon-chengyuan:before {
+    content: '\e605';
+}

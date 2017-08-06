@@ -14,64 +14,64 @@
 <body class="childrenBody">
     <form class="layui-form">
         <div class="layui-form-item">
-            <label class="layui-form-label">文章标题</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input newsName" lay-verify="required" placeholder="请输入文章标题">
-            </div>
-        </div>
-        <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">自定义属性</label>
+                <label class="layui-form-label">ID</label>
                 <div class="layui-input-block">
-                    <input type="checkbox" name="tuijian" class="tuijian" title="推荐">
-                    <input type="checkbox" name="shenhe" class="newsStatus" title="审核">
-                    <input type="checkbox" name="show" class="isShow" title="展示">
+                    <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="ID">
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">文章作者</label>
-                <div class="layui-input-inline">
-                    <input type="text" class="layui-input newsAuthor" lay-verify="required" placeholder="请输入文章作者">
+                <label class="layui-form-label">终端名称</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input terminalName" lay-verify="required" placeholder="终端名称">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">硬件识别码</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input terminalHard" lay-verify="required" placeholder="硬件识别码">
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">发布时间</label>
-                <div class="layui-input-inline">
-                    <input type="text" class="layui-input newsTime" lay-verify="required|date" onclick="layui.laydate({elem:this})">
+                <label class="layui-form-label">所有者</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input terminalAuthor" lay-verify="required" placeholder="所有者">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">默认节目</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input terminalProgram" lay-verify="required" placeholder="默认节目">
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">浏览权限</label>
-                <div class="layui-input-inline">
-                    <select name="browseLook" class="newsLook" lay-filter="browseLook">
-                        <option value="0">开放浏览</option>
-                        <option value="1">会员浏览</option>
-                    </select>
+                <label class="layui-form-label">IP地址</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input terminalIP" lay-verify="required" placeholder="IP地址">
                 </div>
             </div>
         </div>
+
         <div class="layui-form-item">
-            <label class="layui-form-label">关键字</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input" placeholder="请输入文章关键字">
+            <div class="layui-inline">
+                <label class="layui-form-label">许可使用</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="use" class="use" title="使用">
+                </div>
             </div>
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">内容摘要</label>
-            <div class="layui-input-block">
-                <textarea placeholder="请输入内容摘要" class="layui-textarea"></textarea>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">文章内容</label>
-            <div class="layui-input-block">
-                <textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="news_content"></textarea>
-            </div>
-        </div>
+
         <div class="layui-form-item">
             <div class="layui-input-block">
-                <button class="layui-btn" lay-submit="" lay-filter="addNews">立即提交</button>
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <!--<button class="layui-btn layui-btn-primary">取消</button>-->
+                <button class="layui-btn" lay-submit="" lay-filter="addterminal">确认</button>
             </div>
         </div>
     </form>

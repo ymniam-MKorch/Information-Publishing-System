@@ -1,0 +1,23 @@
+﻿[
+  {
+    "ID": "1",
+    "Name": "屏幕组一",
+    "Author": "root",
+    "Describe": "屏幕组一",
+    "Terminal": "1,6"
+  },
+  {
+    "ID": "2",
+    "Name": "屏幕组二",
+    "Author": "root",
+    "Describe": "屏幕组二",
+    "Terminal": "2,3,5"
+  },
+  {
+    "ID": "3",
+    "Name": "屏幕组三",
+    "Author": "root",
+    "Describe": "屏幕组三",
+    "Terminal": "4"
+  }
+]

@@ -20,13 +20,13 @@
       {
         "title": "终端群组",
         "icon": "icon-screengroup",
-        "href": "page/login/login.html",
+        "href": "page/terminal_group/terminal_group.html",
         "spread": false
       },
       {
         "title": "操作记录",
         "icon": "icon-jilu",
-        "href": "page/login/login.html",
+        "href": "page/terminal_record/terminal_record.html",
         "spread": false
       }
     ]
@@ -34,13 +34,13 @@
   {
     "title": "节目管理",
     "icon": "&#xe6ed;",
-    "href": "page/links/linksList.html",
+    "href": "page/program/program.html",
     "spread": false
   },
   {
     "title": "播放日程",
     "icon": "&#xe637;",
-    "href": "page/systemParameter/systemParameter.html",
+    "href": "page/play_schedule/play_schedule.html",
     "spread": false
   },
   {
@@ -52,34 +52,33 @@
       {
         "title": "素材",
         "icon": "&#xe64a;",
-        "href": "page/404.html",
+        "href": "page/material/material.html",
         "spread": false
       },
       {
         "title": "模板比例",
         "icon": "&#xe630;",
-        "href": "page/login/login.html",
-        "spread": false,
-        "target": "_blank"
+        "href": "page/template/template.html",
+        "spread": false
       }
     ]
   },
   {
     "title": "用户",
     "icon": "&#xe612;",
-    "href": "page/systemParameter/systemParameter.html",
+    "href": "page/user/user.html",
     "spread": false
   },
   {
     "title": "设置",
     "icon": "&#xe614;",
-    "href": "page/systemParameter/systemParameter.html",
+    "href": "page/setup/setup.html",
     "spread": false
   },
   {
     "title": "帮助",
     "icon": "&#xe607;",
-    "href": "page/systemParameter/systemParameter.html",
+    "href": "page/help/help.html",
     "spread": false
   }
 ]
