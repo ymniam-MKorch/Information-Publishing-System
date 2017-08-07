@@ -15,15 +15,13 @@
 /*左侧主体*/
 .leftContext{
 float: left;
-width: 35%;
-height:90%;
-border-bottom: 1px solid #BDBDBD;
+width: 40%;
+height:100%;
 }
 
 /*右侧主体*/
 .rightContext{
 float: right;
-width: 55%;
-height:90%;
-border-left: 1px solid #BDBDBD;
+width: 60%;
+height:100%;
 }
