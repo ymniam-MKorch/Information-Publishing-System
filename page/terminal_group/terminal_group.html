@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" media="all" />
     <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="../../css/iconfont.css" media="all" />
-    <link rel="stylesheet" href="../../css/terminal.css" media="all" />
+    <link rel="stylesheet" href="../../css/group.css" media="all" />
 
 </head>
 <body class="childrenBody">
-    <blockquote class="layui-elem-quote terminal_search">
+    <blockquote class="layui-elem-quote group_search">
         <div class="layui-inline">
             <div class="layui-input-inline">
                 <input type="text" value="" placeholder="请输入关键字" class="layui-input search_input">
@@ -24,13 +24,13 @@
             <a class="layui-btn search_btn">查询</a>
         </div>
         <div class="layui-inline">
-            <a class="layui-btn layui-btn-normal terminalAdd_btn">添加群组</a>
+            <a class="layui-btn layui-btn-normal groupAdd_btn">添加群组</a>
         </div>
         <div class="layui-inline">
             <a class="layui-btn layui-btn-danger batchDel">批量删除</a>
         </div>
     </blockquote>
-    <div class="layui-form terminal_list">
+    <div class="layui-form group_list">
         <table class="layui-table">
             <colgroup>
                 <col width="50">
@@ -45,14 +45,14 @@
                 <tr>
                     <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" id="allChoose"></th>
                     <th>ID</th>
-                    <th style="text-align:left;">名称</th>
+                    <th>名称</th>
                     <th>所有者</th>
                     <th>描述</th>
                     <th>下属终端</th>
                     <th>操作</th>
                 </tr>
             </thead>
-            <tbody class="terminal_content"></tbody>
+            <tbody class="group_content"></tbody>
         </table>
     </div>
     <div id="page"></div>

@@ -22,12 +22,12 @@
         addterminal = '{"ID":"' + $(".terminalID").val() + '",';  //ID
         addterminal += '"Name":"' + $(".terminalName").val() + '",';  //名称
         addterminal += '"Hardware_Identification_Code":"' + $(".terminalHard").val() + '",';  //硬件识别码
-        addterminal += '"Author":"' + $(".terminalAuthor").val() + '",'; //文章作者
+        addterminal += '"Author":"' + $(".terminalAuthor option").eq($(".terminalAuthor").val()).text() + '",';//作者
         addterminal += '"Progress":"??%",'; //发送进度
-        addterminal += '"Program":"' + $(".terminalProgram").val() + '",'; //节目
+        addterminal += '"Program":"' + $(".terminalProgram option").eq($(".terminalProgram").val()).text() + '",';//节目
         addterminal += '"Status":"0",'; //状态
         addterminal += '"IP":"' + $(".terminalIP").val() + '",'; //IP
-        addterminal += '"Last_Login": "2017.7.20",'; //时间
+        addterminal += '"Last_Login": "2017.7.20 20:20:20",'; //时间
         addterminal += '"Use":"' + Use + '"}';  //是否展示
 
         addterminalArray.unshift(JSON.parse(addterminal));

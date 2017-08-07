@@ -7,16 +7,16 @@
         $ = layui.jquery;
 
     //加载页面数据
-    var terminalData = '';
+    var groupData = '';
     $.get("../../json/terminalGroup.json", function (data) {
         var newArray = [];
-        terminalData = data;
-        if (window.sessionStorage.getItem("addterminal")) {
-            var addterminal = window.sessionStorage.getItem("addterminal");
-            terminalData = JSON.parse(addterminal).concat(terminalData);
+        groupData = data;
+        if (window.sessionStorage.getItem("addgroup")) {
+            var addgroup = window.sessionStorage.getItem("addgroup");
+            groupData = JSON.parse(addgroup).concat(groupData);
         }
         //执行加载数据的方法
-        terminalList();
+        groupList();
     })
 
     //查询
@@ -30,14 +30,14 @@
                     type: "get",
                     dataType: "json",
                     success: function (data) {
-                        if (window.sessionStorage.getItem("addterminal")) {
-                            var addterminal = window.sessionStorage.getItem("addterminal");
-                            terminalData = JSON.parse(addterminal).concat(data);
+                        if (window.sessionStorage.getItem("addgroup")) {
+                            var addgroup = window.sessionStorage.getItem("addgroup");
+                            groupData = JSON.parse(addgroup).concat(data);
                         } else {
-                            terminalData = data;
+                            groupData = data;
                         }
-                        for (var i = 0; i < terminalData.length; i++) {
-                            var terminalStr = terminalData[i];
+                        for (var i = 0; i < groupData.length; i++) {
+                            var groupStr = groupData[i];
                             var selectStr = $(".search_input").val();
                             function changeStr(data) {
                                 var dataStr = '';
@@ -54,28 +54,28 @@
                                 }
                             }
                             //终端ID
-                            if (terminalStr.ID.indexOf(selectStr) > -1) {
-                                terminalStr["ID"] = changeStr(terminalStr.ID);
+                            if (groupStr.ID.indexOf(selectStr) > -1) {
+                                groupStr["ID"] = changeStr(groupStr.ID);
                             }
                             //终端名称
-                            if (terminalStr.Name.indexOf(selectStr) > -1) {
-                                terminalStr["Name"] = changeStr(terminalStr.Name);
+                            if (groupStr.Name.indexOf(selectStr) > -1) {
+                                groupStr["Name"] = changeStr(groupStr.Name);
                             }
                             //所有者
-                            if (terminalStr.Author.indexOf(selectStr) > -1) {
-                                terminalStr["Author"] = changeStr(terminalStr.Author);
+                            if (groupStr.Author.indexOf(selectStr) > -1) {
+                                groupStr["Author"] = changeStr(groupStr.Author);
                             }
                             //描述
-                            if (terminalStr.Describe.indexOf(selectStr) > -1) {
-                                terminalStr["Describe"] = changeStr(terminalStr.Describe);
+                            if (groupStr.Describe.indexOf(selectStr) > -1) {
+                                groupStr["Describe"] = changeStr(groupStr.Describe);
                             }
-                            if (terminalStr.ID.indexOf(selectStr) > -1 || terminalStr.Name.indexOf(selectStr) > -1
-                                || terminalStr.Author.indexOf(selectStr) > -1 || terminalStr.Describe.indexOf(selectStr) > -1) {
-                                newArray.push(terminalStr);
+                            if (groupStr.ID.indexOf(selectStr) > -1 || groupStr.Name.indexOf(selectStr) > -1
+                                || groupStr.Author.indexOf(selectStr) > -1 || groupStr.Describe.indexOf(selectStr) > -1) {
+                                newArray.push(groupStr);
                             }
                         }
-                        terminalData = newArray;
-                        terminalList(terminalData);
+                        groupData = newArray;
+                        groupList(groupData);
                     }
                 })
 
@@ -89,7 +89,7 @@
     //添加群组
     //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
     $(window).one("resize", function () {
-        $(".terminalAdd_btn").click(function () {
+        $(".groupAdd_btn").click(function () {
             var index = layui.layer.open({
                 title: "添加群组",
                 type: 2,
@@ -107,51 +107,24 @@
         })
     }).resize();
 
-    //刷新进度
-    $(".refresh_all").click(function () {
-        var $checkbox = $('.terminal_list tbody input[type="checkbox"][name="checked"]');
-        var $checked = $('.terminal_list tbody input[type="checkbox"][name="checked"]:checked');
-        if ($checkbox.is(":checked")) {
-            var index = layer.msg('刷新中，请稍候', { icon: 16, time: false, shade: 0.8 });
-            setTimeout(function () {
-                for (var j = 0; j < $checked.length; j++) {
-                    for (var i = 0; i < terminalData.length; i++) {
-                        if (terminalData[i].ID == $checked.eq(j).parents("tr").find(".terminal_del").attr("data-id")) {
-                            //修改列表中的文字
-                            terminalData[i].Progress = "100%";
-                            terminalList(terminalData);
-                            //将选中状态删除
-                            $checked.eq(j).parents("tr").find('input[type="checkbox"][name="checked"]').prop("checked", false);
-                            form.render();
-                        }
-                    }
-                }
-                layer.close(index);
-                layer.msg("刷新成功");
-            }, 2000);
-        } else {
-            layer.msg("请选择需要刷新的终端");
-        }
-    })
-
     //批量删除
     $(".batchDel").click(function () {
-        var $checkbox = $('.terminal_list tbody input[type="checkbox"][name="checked"]');
-        var $checked = $('.terminal_list tbody input[type="checkbox"][name="checked"]:checked');
+        var $checkbox = $('.group_list tbody input[type="checkbox"][name="checked"]');
+        var $checked = $('.group_list tbody input[type="checkbox"][name="checked"]:checked');
         if ($checkbox.is(":checked")) {
             layer.confirm('确定删除选中的终端？', { icon: 3, title: '提示信息' }, function (index) {
                 var index = layer.msg('删除中，请稍候', { icon: 16, time: false, shade: 0.8 });
                 setTimeout(function () {
                     //删除数据
                     for (var j = 0; j < $checked.length; j++) {
-                        for (var i = 0; i < terminalData.length; i++) {
-                            if (terminalData[i].ID == $checked.eq(j).parents("tr").find(".terminal_del").attr("data-id")) {
-                                terminalData.splice(i, 1);
-                                terminalList(terminalData);
+                        for (var i = 0; i < groupData.length; i++) {
+                            if (groupData[i].ID == $checked.eq(j).parents("tr").find(".group_del").attr("data-id")) {
+                                groupData.splice(i, 1);
+                                groupList(groupData);
                             }
                         }
                     }
-                    $('.terminal_list thead input[type="checkbox"]').prop("checked", false);
+                    $('.group_list thead input[type="checkbox"]').prop("checked", false);
                     form.render();
                     layer.close(index);
                     layer.msg("删除成功");
@@ -185,33 +158,33 @@
     })
 
     //操作
-    $("body").on("click", ".terminal_look", function () {  //刷新
+    $("body").on("click", ".group_look", function () {  //刷新
         var _this = $(this);
         var ter;
-        for (var i = 0; i < terminalData.length; i++) {
-            if (terminalData[i].ID == _this.attr("data-id")) {
-                ter = terminalData[i].Terminal;
+        for (var i = 0; i < groupData.length; i++) {
+            if (groupData[i].ID == _this.attr("data-id")) {
+                ter = groupData[i].Terminal;
             }
         }
 
         var strs = new Array();
         strs = ter.split(",");
-        var terminal = '';
+        var group = '';
         for (i = 0; i < strs.length; i++) {
             if (strs[i] == "1")
-                terminal += '屏幕一号\n';
+                group += '屏幕一号\n';
             else if (strs[i] == "2")
-                terminal += '屏幕二号\n';
+                group += '屏幕二号\n';
             else if (strs[i] == "3")
-                terminal += '屏幕三号\n';
+                group += '屏幕三号\n';
             else if (strs[i] == "4")
-                terminal += '屏幕四号\n';
+                group += '屏幕四号\n';
             else if (strs[i] == "5")
-                terminal += '屏幕五号\n';
+                group += '屏幕五号\n';
             else if (strs[i] == "6")
-                terminal += '屏幕六号\n';
+                group += '屏幕六号\n';
             else
-                terminal+='包涵不存在的终端！'
+                group+='包涵不存在的终端！'
         }
 
         layer.open({
@@ -219,23 +192,23 @@
             title: '下属终端',
             skin: 'layui-layer-rim',
             area: ['420px', '240px'],
-            content: terminal
+            content: group
         });
     })
 
-    $("body").on("click", ".terminal_edit", function () {  //编辑
+    $("body").on("click", ".group_edit", function () {  //编辑
         var _this = $(this);
         var Name;
-        for (var i = 0; i < terminalData.length; i++) {
-            if (terminalData[i].ID == _this.attr("data-id")) {
+        for (var i = 0; i < groupData.length; i++) {
+            if (groupData[i].ID == _this.attr("data-id")) {
                 var index = layui.layer.open({
-                    title: "编辑终端",
+                    title: "编辑群组",
                     type: 2,
-                    content: "edit_terminal.html",
+                    content: "edit_group.html",
                     area: ['50%', '50%'],
                     success: function (layero, index) {
                         setTimeout(function () {
-                            layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
+                            layui.layer.tips('点击此处返回群组列表', '.layui-layer-setwin .layui-layer-close', {
                                 tips: 3
                             });
                         }, 500)
@@ -245,26 +218,26 @@
         }
     })
 
-    $("body").on("click", ".terminal_del", function () {  //删除
+    $("body").on("click", ".group_del", function () {  //删除
         var _this = $(this);
         layer.confirm('确定删除此终端？', { icon: 3, title: '提示信息' }, function (index) {
             //_this.parents("tr").remove();
-            for (var i = 0; i < terminalData.length; i++) {
-                if (terminalData[i].ID == _this.attr("data-id")) {
-                    terminalData.splice(i, 1);
-                    terminalList(terminalData);
+            for (var i = 0; i < groupData.length; i++) {
+                if (groupData[i].ID == _this.attr("data-id")) {
+                    groupData.splice(i, 1);
+                    groupList(groupData);
                 }
             }
             layer.close(index);
         });
     })
 
-    function terminalList(that) {
+    function groupList(that) {
         //渲染数据
         function renderDate(data, curr) {
             var dataHtml = '';
             if (!that) {
-                currData = terminalData.concat().splice(curr * nums - nums, nums);
+                currData = groupData.concat().splice(curr * nums - nums, nums);
             } else {
                 currData = that.concat().splice(curr * nums - nums, nums);
             }
@@ -277,16 +250,16 @@
                         + '<td>' + currData[i].Author + '</td>'
                         + '<td align="left">' + currData[i].Describe + '</td>'
                         + '<td>'
-                        + '<li><a class="layui-btn terminal_look" style="background-color:#5FB878;height:35px;" data-id="' + data[i].ID + '"><i class="iconfont icon-look"></i>查看</a></li>'
+                        + '<li><a class="layui-btn group_look" style="background-color:#5FB878;height:35px;" data-id="' + data[i].ID + '"><i class="iconfont icon-look"></i>查看</a></li>'
                         + '</td>'
                     dataHtml +=  '<td>'
                         + '<div class="btn-group-vertical">'
                         + '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background-color:#5FB878;width:80px;"><font color="FFFFFF">操作</font><span class="caret"></span>'
                         + '</button>'
                         + '<ul class="dropdown-menu">'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑群组</a></li>'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_modify" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-chengyuan"></i> 编辑成员</a></li>'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini group_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑群组</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini group_modify" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-chengyuan"></i> 编辑成员</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini group_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
                         + '</ul>'
                         + '</div>'
                         + '</td>'
@@ -301,14 +274,14 @@
         //分页
         var nums = 10; //每页出现的数据量
         if (that) {
-            terminalData = that;
+            groupData = that;
         }
         laypage({
             cont: "page",
-            pages: Math.ceil(terminalData.length / nums),
+            pages: Math.ceil(groupData.length / nums),
             jump: function (obj) {
-                $(".terminal_content").html(renderDate(terminalData, obj.curr));
-                $('.terminal_list thead input[type="checkbox"]').prop("checked", false);
+                $(".group_content").html(renderDate(groupData, obj.curr));
+                $('.group_list thead input[type="checkbox"]').prop("checked", false);
                 form.render();
             }
         })

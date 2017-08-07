@@ -17,13 +17,13 @@
             <div class="layui-inline">
                 <label class="layui-form-label">ID</label>
                 <div class="layui-input-block">
-                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="ID">
+                    <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="ID">
                 </div>
             </div>
             <div class="layui-inline">
                 <label class="layui-form-label">终端名称</label>
                 <div class="layui-input-block">
-                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="终端名称">
+                    <input type="text" class="layui-input terminalName" lay-verify="required" placeholder="终端名称">
                 </div>
             </div>
         </div>
@@ -32,28 +32,42 @@
             <div class="layui-inline">
                 <label class="layui-form-label">硬件识别码</label>
                 <div class="layui-input-block">
-                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="硬件识别码">
+                    <input type="text" class="layui-input terminalHard" lay-verify="required" placeholder="硬件识别码">
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">所有者</label>
+                <label class="layui-form-label">IP地址</label>
                 <div class="layui-input-block">
-                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="所有者">
+                    <input type="text" class="layui-input terminalIP" lay-verify="required" placeholder="IP地址">
                 </div>
             </div>
         </div>
 
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">默认节目</label>
+                <label class="layui-form-label">节目</label>
                 <div class="layui-input-block">
-                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="默认节目">
+                    <!--<input type="text" class="layui-input terminalProgram" lay-verify="required" placeholder="默认节目">-->
+                    <select name="terminalProgram" class="terminalProgram" lay-filter="terminalProgram" lay-verify="required" lay-search>
+                        <option value="">请选择一个节目</option>
+                        <option value="1">无</option>
+                        <option value="2">001</option>
+                        <option value="3">002</option>
+                        <option value="4">003</option>
+                        <option value="5">004</option>
+                        <option value="6">005</option>
+                        <option value="7">006</option>
+                    </select>
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">IP地址</label>
+                <label class="layui-form-label">所有者</label>
                 <div class="layui-input-block">
-                    <input type="text" class="layui-input newsName" lay-verify="required" placeholder="IP地址">
+                    <!--<input type="text" class="layui-input terminalAuthor" lay-verify="required" placeholder="所有者">-->
+                    <select name="terminalAuthor" class="terminalAuthor" lay-filter="terminalAuthor" lay-verify="required" lay-search>
+                        <option value="">请选择一个用户</option>
+                        <option value="1">root</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -70,8 +84,7 @@
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                <button class="layui-btn layui-btn-primary" >取消</button>
-                <button class="layui-btn" lay-submit="" lay-filter="addNews">确认</button>
+                <button class="layui-btn" lay-submit="" lay-filter="edit_terminal">确认</button>
             </div>
         </div>
     </form>

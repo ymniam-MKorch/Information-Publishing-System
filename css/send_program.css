@@ -1,0 +1,29 @@
+﻿.mainContext {
+    border-bottom: solid 1px #BDBDBD;
+    border-left: solid 1px #BDBDBD;
+    border-right: solid 1px #BDBDBD;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFCEC;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*左侧主体*/
+.leftContext{
+float: left;
+width: 35%;
+height:90%;
+border-bottom: 1px solid #BDBDBD;
+}
+
+/*右侧主体*/
+.rightContext{
+float: right;
+width: 55%;
+height:90%;
+border-left: 1px solid #BDBDBD;
+}

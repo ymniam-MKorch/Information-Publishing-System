@@ -239,6 +239,28 @@
         }
     })
 
+    $("body").on("click", ".send_program", function () {  //发送节目
+        var _this = $(this);
+        var Name;
+        for (var i = 0; i < terminalData.length; i++) {
+            if (terminalData[i].ID == _this.attr("data-id")) {
+                var index = layui.layer.open({
+                    title: "发送节目",
+                    type: 2,
+                    content: "../program/send_program.html",
+                    area: ['50%', '50%'],
+                    success: function (layero, index) {
+                        setTimeout(function () {
+                            layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
+                                tips: 3
+                            });
+                        }, 300)
+                    }
+                })
+            }
+        }
+    })
+
     $("body").on("click", ".terminal_del", function () {  //删除
         var _this = $(this);
         layer.confirm('确定删除此终端？', { icon: 3, title: '提示信息' }, function (index) {
@@ -267,7 +289,7 @@
                     dataHtml += '<tr>'
                         + '<td><input type="checkbox" name="checked" lay-skin="primary" lay-filter="choose"></td>'
                         + '<td>' + currData[i].ID + '</td>'
-                        + '<td align="left">' + currData[i].Name + '</td>'
+                        + '<td>' + currData[i].Name + '</td>'
                         + '<td>' + currData[i].Hardware_Identification_Code + '</td>'
                         + '<td>' + currData[i].Author + '</td>'
                         + '<td>' + currData[i].Progress + '<a class="layui-btn layui-btn-mini terminal_refresh" data-id="' + data[i].ID + '" style="background-color:#5FB878;margin-left:30px"><i class="layui-icon">&#x1002;</i></a>'
@@ -287,6 +309,7 @@
                         + '</button>'
                         + '<ul class="dropdown-menu">'
                         + '<li><a class="layui-btn layui-btn-mini terminal_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini send_program" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 发送节目</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini terminal_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
                         + '</ul>'
                         + '</div>'
