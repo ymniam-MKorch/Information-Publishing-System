@@ -1,27 +1,60 @@
-﻿.mainContext {
-    border-bottom: solid 1px #BDBDBD;
-    border-left: solid 1px #BDBDBD;
-    border-right: solid 1px #BDBDBD;
-    width: 100%;
-    height: 100%;
-    background-color: #FFFCEC;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+﻿#maincontent {
+ float: left;
+ height: 300px;
+ width: auto;
+ border: 1px solid #FFFFFF;
+}
+#leftcontent {
+ float: left;
+ height: 300px;
+ width: 300px;
+ border: 1px solid #e2e2e2;
+}
+#rightcontent {
+ float: right;
+ height: 300px;
+ width: 520px;
+ border: 1px solid #e2e2e2;
 }
 
-/*左侧主体*/
-.leftContext{
-float: left;
-width: 40%;
-height:100%;
+.leftcontent p {
+    margin-left:10px;
+    margin-top:10px;
+    font-size:16px;
 }
 
-/*右侧主体*/
-.rightContext{
-float: right;
-width: 60%;
-height:100%;
+.leftcontent .layui-time-item .layui-input-block {
+    width:50px;
+    margin-left:30px;
+}
+
+.leftcontent .layui-time-item .layui-form-label {
+    width:20px;
+    padding:9px 5px;
+}
+
+.leftcontent .layui-form-item .layui-input-block {
+    width:210px;
+    margin-left:50px;
+}
+
+.leftcontent .layui-form-item .layui-form-label {
+    width:30px;
+    padding:9px 5px;
+}
+
+.leftcontent hr {
+    margin:10px 10px;
+}
+
+.leftcontent .Emergency{
+    margin-left:10px;
+}
+
+.leftcontent .Emergency cite{
+    font-size:4px;
+}
+
+.leftcontent .check_button {
+    margin-left:10px;
 }

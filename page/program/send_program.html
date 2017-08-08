@@ -9,25 +9,95 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="../../css/iconfont.css" media="all" />
     <link rel="stylesheet" href="../../css/send_program.css" media="all" />
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
 </head>
 <body class="childrenBody">
-    
-    <!--主体-->
-    <div class="mainContext">
+    <form class="layui-form">
+        <!--主体-->
+        <div id="maincontent" class="maincontent">
 
-        <!--左侧内容-->
-        <div class="leftContext">
+            <!--左侧内容-->
+            <div id="leftcontent" class="leftcontent">
+                <p>持续时间</p>
+                <div class="layui-time-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">H:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="小时">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">M:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="分钟">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">S:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="秒">
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">节目</label>
+                    <div class="layui-input-block">
+                        <select name="Program" class="Program" lay-filter="Program" lay-verify="required" lay-search>
+                            <option value="">请选择一个节目</option>
+                            <option value="1">无</option>
+                            <option value="2">001</option>
+                            <option value="3">002</option>
+                            <option value="4">003</option>
+                            <option value="5">004</option>
+                            <option value="6">005</option>
+                            <option value="7">006</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="Emergency" id="Emergency">
+                    <input type="checkbox" name="" title="紧急通知">
+                    <cite>**优先级最高覆盖其他所有节目</cite>
+                </div>
+
+                <hr />
+
+                <div class="check_button">
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    <button class="layui-btn" lay-submit="" lay-filter="edit_terminal">确认</button>
+                </div>
+
+            </div>
+
+            <!--右侧内容-->
+            <div id="rightcontent" class="rightcontent">
+                <div class="layui-form terminal_list">
+                    <table class="layui-table">
+                        <colgroup>
+                            <col width="50">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" id="allChoose"></th>
+                                <th>名称</th>
+                            </tr>
+                        </thead>
+                        <tbody class="terminal_content"></tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
-
-        <!--右侧内容-->
-        <div class="rightContext">
-        </div>
-
-    </div>
-
-    <script type="text/javascript" src="../../layui/layui.js"></script>
+    </form>
+        <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="send_program.js"></script>
 </body>
 </html>

@@ -248,7 +248,7 @@
                     title: "发送节目",
                     type: 2,
                     content: "../program/send_program.html",
-                    area: ['50%', '50%'],
+                    area: ['50%', '360px'],
                     success: function (layero, index) {
                         setTimeout(function () {
                             layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
