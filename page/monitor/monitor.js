@@ -15,7 +15,7 @@
             var addterminal = window.sessionStorage.getItem("addterminal");
             terminalData = JSON.parse(addterminal).concat(terminalData);
         }
-            //执行加载数据的方法
+        //执行加载数据的方法
         terminalList();
     })
 
@@ -61,25 +61,7 @@
                             if (terminalStr.Name.indexOf(selectStr) > -1) {
                                 terminalStr["Name"] = changeStr(terminalStr.Name);
                             }
-                            //所有者
-                            if (terminalStr.Author.indexOf(selectStr) > -1) {
-                                terminalStr["Author"] = changeStr(terminalStr.Author);
-                            }
-                            //节目
-                            if (terminalStr.Program.indexOf(selectStr) > -1) {
-                                terminalStr["Program"] = changeStr(terminalStr.Program);
-                            }
-                            //IP
-                            if (terminalStr.IP.indexOf(selectStr) > -1) {
-                                terminalStr["IP"] = changeStr(terminalStr.IP);
-                            }
-                            //时间
-                            if (terminalStr.Last_Login.indexOf(selectStr) > -1) {
-                                terminalStr["Last_Login"] = changeStr(terminalStr.Last_Login);
-                            }
-                            if (terminalStr.ID.indexOf(selectStr) > -1 || terminalStr.Name.indexOf(selectStr) > -1
-                                || terminalStr.Author.indexOf(selectStr) > -1 || terminalStr.Program.indexOf(selectStr) > -1
-                                || terminalStr.IP.indexOf(selectStr) > -1 || terminalStr.Last_Login.indexOf(selectStr) > -1) {
+                            if (terminalStr.ID.indexOf(selectStr) > -1 || terminalStr.Name.indexOf(selectStr) > -1) {
                                 newArray.push(terminalStr);
                             }
                         }
@@ -213,7 +195,7 @@
                     terminalList(terminalData);
                 }
             }
-        layer.close(index);
+            layer.close(index);
         }, 1000);
     })
 
@@ -312,31 +294,7 @@
                         + '<td><input type="checkbox" name="checked" lay-skin="primary" lay-filter="choose"></td>'
                         + '<td>' + currData[i].ID + '</td>'
                         + '<td>' + currData[i].Name + '</td>'
-                        + '<td>' + currData[i].Hardware_Identification_Code + '</td>'
-                        + '<td>' + currData[i].Author + '</td>'
-                        + '<td>' + currData[i].Progress + '<a class="layui-btn layui-btn-mini terminal_refresh" data-id="' + data[i].ID + '" style="background-color:#5FB878;margin-left:30px"><i class="layui-icon">&#x1002;</i></a>'
-                        +'</td>'
-                        + '<td>' + currData[i].Program + '</td>';
-                    if (currData[i].Status == "1") {
-                        dataHtml += '<td><img src="../../images/yes.jpg" alt="是" width="25" height="20"> </td>';
-                    } else {
-                        dataHtml += '<td><img src="../../images/no.jpg" alt="否" width="25" height="20"> </td>';
-                    }
-                    dataHtml += '<td>' + currData[i].IP + '</td>'
-                        + '<td>' + currData[i].Last_Login + '</td>'
-                        + '<td><input type="checkbox" name="show" lay-skin="switch" lay-text="是|否" lay-filter="Use"' + currData[i].Use + '></td>'
-                        + '<td>'
-                        + '<div class="btn-group-vertical">'
-                        + '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background-color:#5FB878;width:80px;"><font color="FFFFFF">操作</font><span class="caret"></span>'
-                        + '</button>'
-                        + '<ul class="dropdown-menu">'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑</a></li>'
-                        + '<li><a class="layui-btn layui-btn-mini send_program" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 发送节目</a></li>'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_monitor" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 监控</a></li>'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
-                        + '</ul>'
-                        + '</div>'
-                        + '</td>'
+                        + '<td></td>'
                         + '</tr>';
                 }
             } else {
@@ -361,4 +319,3 @@
         })
     }
 })
-

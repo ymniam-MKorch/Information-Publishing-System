@@ -1,6 +1,6 @@
 ﻿layui.config({
     base: "js/"
-}).Share(['form', 'layer', 'jquery', 'laypage'], function () {
+}).use(['form', 'layer', 'jquery', 'laypage'], function () {
     var form = layui.form(),
         layer = parent.layer === undefined ? layui.layer : parent.layer,
         laypage = layui.laypage,
@@ -91,14 +91,14 @@
         }
     })
 
-    //添加文章
+    //添加节目
     //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
     $(window).one("resize", function () {
         $(".programAdd_btn").click(function () {
             var index = layui.layer.open({
                 title: "添加节目",
                 type: 2,
-                content: "addprogram.html",
+                content: "../terminal/addterminal.html",
                 area: ['100%', '100%'],
                 success: function (layero, index) {
                     setTimeout(function () {
@@ -153,7 +153,7 @@
     //通过判断是否全部选中来确定全选按钮是否选中
     form.on("checkbox(choose)", function (data) {
         var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"])');
-        var childChecked = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"]):checked');
+        var childChecked = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"]):checked')
         if (childChecked.length == child.length) {
             $(data.elem).parents('table').find('thead input#allChoose').get(0).checked = true;
         } else {
@@ -162,33 +162,23 @@
         form.render('checkbox');
     })
 
-    //是否使用
-    form.on('switch(Share)', function (data) {
-        var index = layer.msg('修改中，请稍候', { icon: 16, time: false, shade: 0.8 });
-        setTimeout(function () {
-            layer.close(index);
-            layer.msg("使用状态修改成功！");
-        }, 1000);
-    })
-
     //操作
-
     $("body").on("click", ".program_edit", function () {  //编辑
         var _this = $(this);
         var Name;
         for (var i = 0; i < programData.length; i++) {
             if (programData[i].ID == _this.attr("data-id")) {
                 var index = layui.layer.open({
-                    title: "编辑终端",
+                    title: "编辑节目",
                     type: 2,
                     content: "edit_program.html",
                     area: ['50%', '50%'],
                     success: function (layero, index) {
                         setTimeout(function () {
-                            layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
+                            layui.layer.tips('点击此处返回节目列表', '.layui-layer-setwin .layui-layer-close', {
                                 tips: 3
                             });
-                        }, 300)
+                        }, 500)
                     }
                 })
             }
@@ -197,7 +187,7 @@
 
     $("body").on("click", ".program_del", function () {  //删除
         var _this = $(this);
-        layer.confirm('确定删除此终端？', { icon: 3, title: '提示信息' }, function (index) {
+        layer.confirm('确定删除此节目？', { icon: 3, title: '提示信息' }, function (index) {
             //_this.parents("tr").remove();
             for (var i = 0; i < programData.length; i++) {
                 if (programData[i].ID == _this.attr("data-id")) {
@@ -220,6 +210,7 @@
             }
             if (currData.length != 0) {
                 for (var i = 0; i < currData.length; i++) {
+
                     dataHtml += '<tr>'
                         + '<td><input type="checkbox" name="checked" lay-skin="primary" lay-filter="choose"></td>'
                         + '<td>' + currData[i].ID + '</td>'
@@ -231,7 +222,7 @@
                     } else {
                         dataHtml += '<td><img src="../../images/no.jpg" alt="否" width="25" height="20"> </td>';
                     }
-                    dataHtml += '<td><input type="checkbox" name="show" lay-skin="switch" lay-text="是|否" lay-filter="Share"' + currData[i].Share + '></td>'
+                    dataHtml += '<td><input type="checkbox" name="Share" lay-skin="switch" lay-text="是|否" lay-filter="Share"' + currData[i].Share + '></td>'
                         + '<td>' + currData[i].Time + '</td>'
                         + '<td>'
                         + '<div class="btn-group-vertical">'

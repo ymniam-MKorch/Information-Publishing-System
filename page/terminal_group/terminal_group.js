@@ -112,7 +112,7 @@
         var $checkbox = $('.group_list tbody input[type="checkbox"][name="checked"]');
         var $checked = $('.group_list tbody input[type="checkbox"][name="checked"]:checked');
         if ($checkbox.is(":checked")) {
-            layer.confirm('确定删除选中的终端？', { icon: 3, title: '提示信息' }, function (index) {
+            layer.confirm('确定删除选中的群组？', { icon: 3, title: '提示信息' }, function (index) {
                 var index = layer.msg('删除中，请稍候', { icon: 16, time: false, shade: 0.8 });
                 setTimeout(function () {
                     //删除数据
@@ -131,7 +131,7 @@
                 }, 2000);
             })
         } else {
-            layer.msg("请选择需要删除的终端");
+            layer.msg("请选择需要删除的群组");
         }
     })
 
@@ -220,7 +220,7 @@
 
     $("body").on("click", ".group_del", function () {  //删除
         var _this = $(this);
-        layer.confirm('确定删除此终端？', { icon: 3, title: '提示信息' }, function (index) {
+        layer.confirm('确定删除此群组？', { icon: 3, title: '提示信息' }, function (index) {
             //_this.parents("tr").remove();
             for (var i = 0; i < groupData.length; i++) {
                 if (groupData[i].ID == _this.attr("data-id")) {
@@ -246,12 +246,12 @@
                     dataHtml += '<tr>'
                         + '<td><input type="checkbox" name="checked" lay-skin="primary" lay-filter="choose"></td>'
                         + '<td>' + currData[i].ID + '</td>'
-                        + '<td align="left">' + currData[i].Name + '</td>'
+                        + '<td>' + currData[i].Name + '</td>'
                         + '<td>' + currData[i].Author + '</td>'
-                        + '<td align="left">' + currData[i].Describe + '</td>'
+                        + '<td>' + currData[i].Describe + '</td>'
                         + '<td>'
                         + '<li><a class="layui-btn group_look" style="background-color:#5FB878;height:35px;" data-id="' + data[i].ID + '"><i class="iconfont icon-look"></i>查看</a></li>'
-                        + '</td>'
+                        + '</td>';
                     dataHtml +=  '<td>'
                         + '<div class="btn-group-vertical">'
                         + '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background-color:#5FB878;width:80px;"><font color="FFFFFF">操作</font><span class="caret"></span>'

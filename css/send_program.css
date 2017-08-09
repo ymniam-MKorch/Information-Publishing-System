@@ -22,40 +22,41 @@
     margin-top:10px;
     font-size:16px;
 }
-
 .leftcontent .layui-time-item .layui-input-block {
     width:50px;
     margin-left:30px;
 }
-
 .leftcontent .layui-time-item .layui-form-label {
     width:20px;
     padding:9px 5px;
 }
-
 .leftcontent .layui-form-item .layui-input-block {
     width:210px;
     margin-left:50px;
 }
-
 .leftcontent .layui-form-item .layui-form-label {
     width:30px;
     padding:9px 5px;
 }
-
 .leftcontent hr {
     margin:10px 10px;
 }
-
 .leftcontent .Emergency{
     margin-left:10px;
 }
-
 .leftcontent .Emergency cite{
     font-size:4px;
 }
-
 .leftcontent .check_button {
     margin-left:10px;
 }
-
+.rightcontent .layui-elem-quote {
+    width:250px;
+    padding:5px;
+    border-left:0px;
+    margin-bottom:0px;
+}
+.rightcontent .terminal_list {
+    height:250px;
+    overflow:scroll;
+}

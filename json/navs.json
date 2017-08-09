@@ -32,6 +32,12 @@
     ]
   },
   {
+    "title": "监控",
+    "icon": "icon-monitor",
+    "href": "page/monitor/monitor.html",
+    "spread": false
+  },
+  {
     "title": "节目管理",
     "icon": "&#xe6ed;",
     "href": "page/program/program.html",
