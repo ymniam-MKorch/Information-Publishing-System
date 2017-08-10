@@ -270,7 +270,7 @@
                     title: "监控",
                     type: 2,
                     content: "../monitor/monitoring.html",
-                    area: ['70%', '70%'],
+                    area: ['50%', '70%'],
                     success: function (layero, index) {
                         setTimeout(function () {
                             layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
@@ -333,6 +333,8 @@
                         + '<li><a class="layui-btn layui-btn-mini terminal_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini send_program" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 发送节目</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini terminal_monitor" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 监控</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini power" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-logout1"></i> 电源管理</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini wake" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-wake"></i> 网络唤醒</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini terminal_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
                         + '</ul>'
                         + '</div>'

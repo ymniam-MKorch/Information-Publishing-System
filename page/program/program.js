@@ -98,7 +98,7 @@
             var index = layui.layer.open({
                 title: "添加节目",
                 type: 2,
-                content: "../terminal/addterminal.html",
+                content: "addprogram.html",
                 area: ['100%', '100%'],
                 success: function (layero, index) {
                     setTimeout(function () {
@@ -142,7 +142,7 @@
 
     //全选
     form.on('checkbox(allChoose)', function (data) {
-        var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"])');
+        var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="Share"])');
         child.each(function (index, item) {
             item.checked = data.elem.checked;
             form.render();
@@ -152,14 +152,23 @@
 
     //通过判断是否全部选中来确定全选按钮是否选中
     form.on("checkbox(choose)", function (data) {
-        var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"])');
-        var childChecked = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="show"]):checked')
+        var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="Share"])');
+        var childChecked = $(data.elem).parents('table').find('tbody input[type="checkbox"]:not([name="Share"]):checked')
         if (childChecked.length == child.length) {
             $(data.elem).parents('table').find('thead input#allChoose').get(0).checked = true;
         } else {
             $(data.elem).parents('table').find('thead input#allChoose').get(0).checked = false;
         }
         form.render('checkbox');
+    })
+
+    //是否使用
+    form.on('switch(Share)', function (data) {
+        var index = layer.msg('修改中，请稍候', { icon: 16, time: false, shade: 0.8 });
+        setTimeout(function () {
+            layer.close(index);
+            layer.msg("共享状态修改成功！");
+        }, 1000);
     })
 
     //操作

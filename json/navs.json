@@ -72,8 +72,22 @@
   {
     "title": "用户",
     "icon": "&#xe612;",
-    "href": "page/user/user.html",
-    "spread": false
+    "href": "",
+    "spread": false,
+    "children": [
+      {
+        "title": "用户管理",
+        "icon": "&#xe612;",
+        "href": "page/user/user.html",
+        "spread": false
+      },
+      {
+        "title": "权限管理",
+        "icon": "icon-permissions",
+        "href": "page/user/permissions.html",
+        "spread": false
+      }
+    ]
   },
   {
     "title": "设置",
