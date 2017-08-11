@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Level": "超级管理员",
+    "Send": "checked",
+    "Examine": "checked",
+    "Add": "checked",
+    "Edit": "checked",
+    "Delete": "checked",
+    "Monitor": "checked",
+    "Permision": "checked"
+  },
+  {
+    "Level": "管理员",
+    "Send": "checked",
+    "Examine": "checked",
+    "Add": "checked",
+    "Edit": "checked",
+    "Delete": "checked",
+    "Monitor": "checked",
+    "Permision": ""
+  },
+  {
+    "Level": "操作员",
+    "Send": "checked",
+    "Examine": "",
+    "Add": "",
+    "Edit": "checked",
+    "Delete": "",
+    "Monitor": "checked",
+    "Permision": ""
+  }
+]

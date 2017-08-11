@@ -332,7 +332,7 @@
                         + '<ul class="dropdown-menu">'
                         + '<li><a class="layui-btn layui-btn-mini terminal_edit" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-edit"></i> 编辑</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini send_program" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 发送节目</a></li>'
-                        + '<li><a class="layui-btn layui-btn-mini terminal_monitor" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-send"></i> 监控</a></li>'
+                        + '<li><a class="layui-btn layui-btn-mini terminal_monitor" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-monitor"></i> 监控</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini power" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-logout1"></i> 电源管理</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini wake" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="iconfont icon-wake"></i> 网络唤醒</a></li>'
                         + '<li><a class="layui-btn layui-btn-mini terminal_del" style="background-color:#5FB878;height:25px;" data-id="' + data[i].ID + '"><i class="layui-icon">&#xe640;</i> 删除</a></li>'
