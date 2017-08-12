@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 370043 */
-  src: url('//at.alicdn.com/t/font_370043_xj1ssek606tlz0k9.eot');
-  src: url('//at.alicdn.com/t/font_370043_xj1ssek606tlz0k9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_370043_xj1ssek606tlz0k9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_370043_xj1ssek606tlz0k9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_370043_xj1ssek606tlz0k9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.eot');
+  src: url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -70,3 +70,5 @@
 .icon-permissions:before {content: '\e6b4';}
 
 .icon-wake:before {content: '\e669';}
+
+.icon-large:before {content: '\e609';}

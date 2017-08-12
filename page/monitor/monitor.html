@@ -12,41 +12,24 @@
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" media="all" />
     <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="../../css/iconfont.css" media="all" />
-    <link rel="stylesheet" href="../../css/terminal.css" media="all" />
+    <link rel="stylesheet" href="../../css/monitor.css" media="all" />
 
 </head>
 <body class="childrenBody">
-    <blockquote class="layui-elem-quote terminal_search">
-        <div class="layui-inline">
-            <div class="layui-input-inline">
-                <input type="text" value="" placeholder="请输入关键字" class="layui-input search_input">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote terminal_search">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" value="" placeholder="请输入关键字" class="layui-input search_input">
+                </div>
+                <a class="layui-btn search_btn">查询</a>
             </div>
-            <a class="layui-btn search_btn">查询</a>
-        </div>
-        <div class="layui-inline">
-            <a class="layui-btn layui-btn-normal batchMonitor">批量监控</a>
-        </div>
-    </blockquote>
-    <div class="layui-form terminal_list">
-        <table class="layui-table">
-            <colgroup>
-                <col width="50">
-                <col width="5%">
-                <col>
-                <col width="60%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" id="allChoose"></th>
-                    <th>ID</th>
-                    <th>名称</th>
-                    <th>监控</th>
-                </tr>
-            </thead>
-            <tbody class="terminal_content"></tbody>
-        </table>
-    </div>
-    <div id="page"></div>
+            <div class="layui-inline">
+                <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="全选">
+            </div>
+        </blockquote>
+        <ul id="Monitor"></ul>
+    </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="monitor.js"></script>
     <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>

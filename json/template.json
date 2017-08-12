@@ -1,0 +1,34 @@
+﻿[
+  {
+    "ID": "1",
+    "Name": "横屏 16:9",
+    "Label": "比例",
+    "Owner": "root",
+    "Share": "checked",
+    "Last_modify": "2017.7.20 20:20:20"
+  },
+  {
+    "ID": "2",
+    "Name": "横屏 4:3",
+    "Label": "比例",
+    "Owner": "root",
+    "Share": "checked",
+    "Last_modify": "2017.7.20 20:20:20"
+  },
+  {
+    "ID": "3",
+    "Name": "竖屏 - 9:16",
+    "Label": "比例",
+    "Owner": "root",
+    "Share": "checked",
+    "Last_modify": "2017.7.20 20:20:20"
+  },
+  {
+    "ID": "4",
+    "Name": "紧急通知",
+    "Label": "模板",
+    "Owner": "root",
+    "Share": "",
+    "Last_modify": "2017.7.20 20:20:20"
+  }
+]

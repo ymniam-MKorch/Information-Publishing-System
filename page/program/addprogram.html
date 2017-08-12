@@ -48,6 +48,20 @@
         </div>
 
         <div class="layui-form-item">
+            <label class="layui-form-label">模板</label>
+            <div class="layui-input-block">
+                <select name="programTemplate" class="programTemplate" lay-filter="programTemplate" lay-verify="required" lay-search>
+                    <option value="">请选择一个模板</option>
+                    <option value="1">无</option>
+                    <option value="2">横屏 16:9</option>
+                    <option value="3">横屏 4:3</option>
+                    <option value="4">竖屏 - 9:16</option>
+                    <option value="5">紧急通知</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
             <div class="layui-inline">
                 <label class="layui-form-label">状态</label>
                 <div class="layui-input-block">
