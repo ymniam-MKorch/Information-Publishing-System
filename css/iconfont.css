@@ -5,70 +5,151 @@
 /*使用方法 http://www.cnblogs.com/lch880/p/3359222.html */
 
 @font-face {
-  font-family: 'iconfont';  /* project id 370043 */
-  src: url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.eot');
-  src: url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.woff') format('woff'),
-  url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_370043_jw9obuzkjglow29.svg#iconfont') format('svg');
+    font-family: 'iconfont'; /* project id 370043 */
+    src: url('//at.alicdn.com/t/font_370043_xychtoombpytlnmi.eot');
+    src: url('//at.alicdn.com/t/font_370043_xychtoombpytlnmi.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_370043_xychtoombpytlnmi.woff') format('woff'), url('//at.alicdn.com/t/font_370043_xychtoombpytlnmi.ttf') format('truetype'), url('//at.alicdn.com/t/font_370043_xychtoombpytlnmi.svg#iconfont') format('svg');
 }
 
 .iconfont {
-  font-family:"iconfont" !important;
-  font-size:16px;
-  font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  /*-moz-osx-font-smoothing: grayscale;*/
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    /*-moz-osx-font-smoothing: grayscale;*/
 }
 
-.icon-screengroup:before {content: '\e644';}
+.icon-screengroup:before {
+    content: '\e644';
+}
 
-.icon-shezhi1:before {content: '\e661';}
+.icon-shezhi1:before {
+    content: '\e661';
+}
 
-.icon-shezhi2:before {content: '\e60a';}
+.icon-shezhi2:before {
+    content: '\e60a';
+}
 
-.icon-shezhi3:before {content: '\e622';}
+.icon-shezhi3:before {
+    content: '\e622';
+}
 
-.icon-shezhi4:before {content: '\e645';}
+.icon-shezhi4:before {
+    content: '\e645';
+}
 
-.icon-huanfu:before {content: '\e60c';}
+.icon-huanfu:before {
+    content: '\e60c';
+}
 
-.icon-logout1:before {content: '\e638';}
+.icon-logout1:before {
+    content: '\e638';
+}
 
-.icon-logout2:before {content: '\e655';}
+.icon-logout2:before {
+    content: '\e655';
+}
 
-.icon-logout3:before {content: '\e76a';}
+.icon-logout3:before {
+    content: '\e76a';
+}
 
-.icon-zhanghu1:before {content: '\e608';}
+.icon-zhanghu1:before {
+    content: '\e608';
+}
 
-.icon-zhanghu2:before {content: '\e602';}
+.icon-zhanghu2:before {
+    content: '\e602';
+}
 
-.icon-menu1:before {content: '\e721';}
+.icon-menu1:before {
+    content: '\e721';
+}
 
-.icon-dianziping:before {content: '\e673';}
+.icon-dianziping:before {
+    content: '\e673';
+}
 
-.icon-caozuo:before {content: '\e628';}
+.icon-caozuo:before {
+    content: '\e628';
+}
 
-.icon-guanbi1:before {content: '\e71c';}
+.icon-guanbi1:before {
+    content: '\e71c';
+}
 
-.icon-guanbi2:before {content: '\e633';}
+.icon-guanbi2:before {
+    content: '\e633';
+}
 
-.icon-computer:before {content: '\e649';}
+.icon-computer:before {
+    content: '\e649';
+}
 
-.icon-jilu:before {content: '\e612';}
+.icon-jilu:before {
+    content: '\e612';
+}
 
-.icon-edit:before {content: '\e61a';}
+.icon-edit:before {
+    content: '\e61a';
+}
 
-.icon-look:before {content: '\e634';}
+.icon-look:before {
+    content: '\e634';
+}
 
-.icon-chengyuan:before {content: '\e605';}
+.icon-chengyuan:before {
+    content: '\e605';
+}
 
-.icon-send:before {content: '\e715';}
+.icon-send:before {
+    content: '\e715';
+}
 
-.icon-monitor:before {content: '\e603';}
+.icon-monitor:before {
+    content: '\e603';
+}
 
-.icon-permissions:before {content: '\e6b4';}
+.icon-permissions:before {
+    content: '\e6b4';
+}
 
-.icon-wake:before {content: '\e669';}
+.icon-wake:before {
+    content: '\e669';
+}
 
-.icon-large:before {content: '\e609';}
+.icon-large:before {
+    content: '\e609';
+}
+
+.icon-message:before {
+    content: '\e62e';
+}
+
+.icon-map:before {
+    content: '\e6d7';
+}
+
+.icon-call:before {
+    content: '\e60f';
+}
+
+.icon-voice:before {
+    content: '\e600';
+}
+
+.icon-meeting:before {
+    content: '\e601';
+}
+
+.icon-return:before {
+    content: '\e600';
+}
+
+.icon-intercom:before {
+    content: '\e601';
+}
+
+.icon-listen:before {
+    content: '\e604';
+}
