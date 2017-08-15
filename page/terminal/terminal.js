@@ -95,7 +95,7 @@
         }
     })
 
-    //添加文章
+    //添加终端
     //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
     $(window).one("resize", function () {
         $(".terminalAdd_btn").click(function () {
@@ -109,7 +109,7 @@
                         layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
                             tips: 3
                         });
-                    }, 500)
+                    }, 100)
                 }
             })
             layui.layer.full(index);
@@ -232,7 +232,7 @@
                             layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
                                 tips: 3
                             });
-                        }, 300)
+                        }, 100)
                     }
                 })
             }
@@ -254,7 +254,7 @@
                             layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
                                 tips: 3
                             });
-                        }, 300)
+                        },100)
                     }
                 })
             }
@@ -276,7 +276,29 @@
                             layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
                                 tips: 3
                             });
-                        }, 300)
+                        }, 100)
+                    }
+                })
+            }
+        }
+    })
+
+    $("body").on("click", ".power", function () {  //电源管理
+        var _this = $(this);
+        var Name;
+        for (var i = 0; i < terminalData.length; i++) {
+            if (terminalData[i].ID == _this.attr("data-id")) {
+                var index = layui.layer.open({
+                    title: "电源管理",
+                    type: 2,
+                    content: "terminal_power.html",
+                    area: ['50%', '55%'],
+                    success: function (layero, index) {
+                        setTimeout(function () {
+                            layui.layer.tips('点击此处返回终端列表', '.layui-layer-setwin .layui-layer-close', {
+                                tips: 3
+                            });
+                        }, 100)
                     }
                 })
             }

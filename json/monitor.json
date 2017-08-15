@@ -1,0 +1,26 @@
+﻿[
+  {
+    "monitorSrc": "../../video/example.mp4",
+    "monitorTitle": "屏幕一号"
+  },
+  {
+    "monitorSrc": "../../video/example.mp4",
+    "monitorTitle": "屏幕二号"
+  },
+  {
+    "monitorSrc": "../../video/example.mp4",
+    "monitorTitle": "屏幕三号"
+  },
+  {
+    "monitorSrc": "../../video/example.mp4",
+    "monitorTitle": "屏幕四号"
+  },
+  {
+    "monitorSrc": "../../video/example.mp4",
+    "monitorTitle": "屏幕五号"
+  },
+  {
+    "monitorSrc": "../../video/example.mp4",
+    "monitorTitle": "屏幕六号"
+  }
+]

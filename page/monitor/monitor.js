@@ -85,28 +85,23 @@
     //    }
     //})
 
-    //删除单张图片
-    //$("body").on("click", ".monitor_look", function () {
-    //    var _this = $(this);
-    //    var Name;
-    //    for (var i = 0; i < terminalData.length; i++) {
-    //        if (terminalData[i].ID == _this.attr("data-id")) {
-    //            var index = layui.layer.open({
-    //                title: "监控",
-    //                type: 2,
-    //                content: "monitoring.html",
-    //                area: ['50%', '70%'],
-    //                success: function (layero, index) {
-    //                    setTimeout(function () {
-    //                        layui.layer.tips('点击此处返回监控列表', '.layui-layer-setwin .layui-layer-close', {
-    //                            tips: 3
-    //                        });
-    //                    }, 300)
-    //                }
-    //            })
-    //        }
-    //    }
-    //})
+    //放大监控
+    $("body").on("click", ".monitor_look", function () {
+        var _this = $(this);
+        var index = layui.layer.open({
+            title: "监控",
+            type: 2,
+            content: "monitoring.html",
+            area: ['50%', '70%'],
+            success: function (layero, index) {
+                setTimeout(function () {
+                    layui.layer.tips('点击此处返回监控列表', '.layui-layer-setwin .layui-layer-close', {
+                        tips: 3
+                    });
+                }, 100)
+            }
+        })
+    })
 
     //全选
     form.on('checkbox(selectAll)', function (data) {

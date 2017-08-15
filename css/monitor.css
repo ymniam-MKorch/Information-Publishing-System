@@ -1,0 +1,21 @@
+﻿.layui-flow-more{ clear: both; margin-top: 20px; }
+#Monitor a{ width:32%; margin:0.5% 0.5%; float: left; overflow:hidden;}
+#Monitor li video{ width:100%; }
+#Monitor la .operate{ display: block; height: 40px; width:100%; background:#f4f5f9; }
+#Monitor la .operate .check{ float:left; margin-left:11px; height:18px; padding:11px 0; }
+#Monitor la .operate .monitor_look{ float:right; margin:7px 11px 0 0; font-size: 22px; cursor:pointer; }
+#Monitor la .operate .monitor_look:hover{ color:#f00; }
+
+/*适配*/
+@media screen and (max-width:1050px){
+	/*用户信息*/
+	#Monitor li{ width:24%;}
+}
+@media screen and (max-width: 750px){
+	/*用户信息*/
+	#Monitor li{ width:49%;}
+}
+@media screen and (max-width:432px){
+	/*用户信息*/
+	#Monitor li{ width:99%;}
+}

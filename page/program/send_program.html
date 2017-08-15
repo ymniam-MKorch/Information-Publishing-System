@@ -25,19 +25,19 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">H:</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="小时">
+                            <input type="text" class="layui-input program_timeh" lay-verify="required" value="24">
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">M:</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="分钟">
+                            <input type="text" class="layui-input program_timem" lay-verify="required" value="0">
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">S:</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input terminalID" lay-verify="required" placeholder="秒">
+                            <input type="text" class="layui-input program_times" lay-verify="required" value="0">
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
 
                 <div class="check_button">
                     <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                    <button class="layui-btn" lay-submit="" lay-filter="edit_terminal">确认</button>
+                    <button class="layui-btn" lay-submit="" lay-filter="comfirm_send">确认</button>
                 </div>
 
             </div>
